@@ -4,13 +4,19 @@ import React from "react";
 
 const HomeHeaderLogo = () => {
   return (
-    <div>
+    <div className="flex gap-4 items-center">
       <Image
         src="/logo/pemtek.png"
         alt="Logo divisi pengembangan teknologi BEM Fatisda UNS"
-        width={100}
+        width={60}
         height={1}
       />
+      <div className="flex flex-col text-neutral-500 text-sm -mt-1">
+        <span>Kementerian Pengembangan Teknologi</span>
+        <span className="text-lg font-bold text-neutral-600">
+          BEM FATISDA UNS
+        </span>
+      </div>
     </div>
   );
 };
