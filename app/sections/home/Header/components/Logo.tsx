@@ -10,6 +10,7 @@ const HomeHeaderLogo = () => {
         alt="Logo divisi pengembangan teknologi BEM Fatisda UNS"
         width={60}
         height={1}
+        draggable={false}
       />
       <div className="flex flex-col text-neutral-500 text-sm -mt-1">
         <span>Kementerian Pengembangan Teknologi</span>

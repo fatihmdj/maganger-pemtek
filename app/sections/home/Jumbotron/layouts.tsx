@@ -7,8 +7,8 @@ import HomeJumbotronBigPicture from "./components/BigPicture";
 
 const HomeJumbotron = () => {
   return (
-    <div className="flex justify-between">
-      <div className="flex flex-col gap-3">
+    <div className="flex justify-between items-center mx-16">
+      <div className="flex flex-col gap-3 -mt-6">
         <HomeJumbotronTitle />
         <HomeJumbotronSubtitle />
         <div className="mt-4">

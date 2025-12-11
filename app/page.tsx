@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <HomeHeader />
-      <div className="mt-28">
+      <div className="mt-32">
         <HomeJumbotron />
       </div>
     </div>
