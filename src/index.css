@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+body {
+  font-family: "PlusJakartaSans", sans-serif;
+}
+@theme {
+  --font-sans: PlusJakartaSans, ui-sans-serif, system-ui, sans-serif;
+}
