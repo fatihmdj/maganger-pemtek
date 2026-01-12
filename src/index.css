@@ -6,3 +6,11 @@ body {
 @theme {
   --font-sans: PlusJakartaSans, ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Hero Section */
+.bg-boxed-pattern {
+  background-color: #fbf9ff;
+  background-image: linear-gradient(#efefef 1px, transparent 1px),
+    linear-gradient(90deg, #efefef 1px, transparent 1px);
+  background-size: 40px 40px;
+}
