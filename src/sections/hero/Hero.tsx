@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 const Hero = () => {
   return (
-    <div className="w-full pt-32">
+    <div className="w-full pt-32 pb-42 bg-boxed-pattern">
       <div className="flex flex-col items-center">
         <div className="flex items-center justify-center gap-1 w-fit pt-2 pb-3 pr-6 pl-4 rounded-full bg-blue-100 text-blue-700">
           <Icon icon="icon-park-outline:dot" className="w-auto h-5" />
