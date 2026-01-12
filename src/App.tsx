@@ -1,7 +1,9 @@
+import Navbar from "./sections/navbar/Navbar";
+
 const App = () => {
   return (
-    <div>
-      <h1>Maganger Pemtek</h1>
+    <div className="border-b border-b-neutral-200">
+      <Navbar />
     </div>
   );
 };
