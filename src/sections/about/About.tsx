@@ -1,13 +1,15 @@
 const About = () => {
   return (
-    <div className="bg-[#FBF9FF]">
+    <div className="flex justify-between max-w-300 mx-auto py-24">
       <div>
-        <div>
-          <h1>Tentang Kemenko</h1>
-          <img src="/logo/Medtek.png" alt="logo medtek" />
+        <div className="text-6xl font-black">
+          <h1 className="">Tentang Kemenko</h1>
+          <h1 className="mt-4">
+            <span className="text-blue-700">Med</span>tek
+          </h1>
         </div>
-        <div />
-        <div>
+        <div className="w-64 h-1.5 mt-14 mb-10 rounded-full bg-amber-200 slash-line" />
+        <div className="text-lg text-neutral-500 font-medium max-w-140 flex flex-col gap-8">
           <p>
             Kemenko Media dan Teknologi adalah garda terdepan informasi dan
             digitalisasi BEM FATISDA. Kami tidak hanya menyampaikan berita,
@@ -20,19 +22,31 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div>
-        <div>
-          <img src="/logo/Medkom.png" alt="Logo media dan komunikasi" />
-          <img src="/logo/Pemtek.png" alt="Logo pengembangan teknologi" />
+      <div className="flex flex-col gap-4">
+        <div className="flex w-fit h-68 bg-white rounded-xl px-8 py-12 gap-4 border border-neutral-100">
+          <img
+            src="/logo/Medkom.png"
+            alt="Logo media dan komunikasi"
+            className="h-full w-fit"
+          />
+          <img
+            src="/logo/Pemtek.png"
+            alt="Logo pengembangan teknologi"
+            className="h-full w-fit"
+          />
         </div>
-        <div>
-          <div>
-            <h1>15</h1>
-            <h4>Program Kerja</h4>
+        <div className="flex gap-4 w-full">
+          <div className="flex-1 rounded-xl text-center bg-white border border-neutral-100 py-6">
+            <h1 className="text-7xl font-black text-blue-700">15</h1>
+            <h4 className="text-neutral-400 font-medium text-lg mt-1">
+              Program Kerja
+            </h4>
           </div>
-          <div>
-            <h1>15</h1>
-            <h3>Peserta Maganger</h3>
+          <div className="flex-1 rounded-xl text-center bg-white border border-neutral-100 py-6">
+            <h1 className="text-7xl font-black text-amber-600">15</h1>
+            <h4 className="text-neutral-400 font-medium text-lg mt-1">
+              Peserta Maganger
+            </h4>
           </div>
         </div>
       </div>

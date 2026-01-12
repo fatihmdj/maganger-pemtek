@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+* {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "PlusJakartaSans", sans-serif;
 }
@@ -13,4 +16,9 @@ body {
   background-image: linear-gradient(#efefef 1px, transparent 1px),
     linear-gradient(90deg, #efefef 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* About Section */
+.slash-line {
+  background-image: linear-gradient(to right, #2249ca, #c15e20);
 }

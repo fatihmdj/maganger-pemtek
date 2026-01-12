@@ -11,7 +11,7 @@ const App = () => {
       <div className="pt-12">
         <Hero />
       </div>
-      <div>
+      <div className="bg-[#FBF9FF]" id="about">
         <About />
       </div>
     </div>
