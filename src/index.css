@@ -22,3 +22,11 @@ body {
 .slash-line {
   background-image: linear-gradient(to right, #2249ca, #c15e20);
 }
+
+/* Meet The Interns Section*/
+.bg-boxed-pattern1 {
+  background-color: #fdfcff;
+  background-image: linear-gradient(#fbf9ff 3px, transparent 3px),
+    linear-gradient(90deg, #fbf9ff 3px, transparent 3px);
+  background-size: 40px 40px;
+}

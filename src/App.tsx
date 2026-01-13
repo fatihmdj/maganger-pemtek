@@ -1,6 +1,7 @@
 import About from "./sections/about/About";
 import Hero from "./sections/hero/Hero";
 import Navbar from "./sections/navbar/Navbar";
+import MeetTheInterns from "./sections/meetTheInterns/meetTheInterns";
 
 const App = () => {
   return (
@@ -13,6 +14,9 @@ const App = () => {
       </div>
       <div className="bg-[#FBF9FF]" id="about">
         <About />
+      </div>
+      <div className="bg-[#fdfcff]" id="meetTheInterns">
+        <MeetTheInterns />
       </div>
     </div>
   );
