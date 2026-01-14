@@ -24,11 +24,10 @@ const App = () => {
       <div>
         <Programs />
       </div>
-      <div>
       <div className="bg-[#fdfcff]" id="meetTheInterns">
         <MeetTheInterns />
       </div>
-      <div> 
+      <div>
         <Footer />
       </div>
     </div>
