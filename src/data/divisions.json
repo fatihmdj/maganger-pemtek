@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Medkom",
+    "image": "/icons/MedkomIcon.png",
+    "tagline": "The Voice & The Vision",
+    "description": "Fokus pada pengembangan website, aplikasi, UI/UX, dan pemeliharaan sistem informasi. Mereka adalah inovator yang membangun infrastruktur digital untuk kemudahan mahasiswa.",
+    "icon": "fluent:megaphone-12-filled",
+    "focus": "Social Media & Branding",
+    "backgroundColor": "amber-600",
+    "textColor": "amber-100"
+  },
+  {
+    "name": "Pemtek",
+    "tagline": "The Architects of Digital Ecosystem",
+    "image": "/icons/PemtekIcon.png",
+    "description": "Bertanggung jawab atas branding, desain grafis, videografi, dan manajemen media sosial. Mereka adalah pencerita yang memastikan setiap pesan BEM terdengar lantang dan estetik.",
+    "icon": "mingcute:code-fill",
+    "focus": "Web & App Development",
+    "backgroundColor": "blue-600",
+    "textColor": "blue-100"
+  }
+]
