@@ -18,11 +18,6 @@ const Division = () => {
       ) as HTMLElement;
 
       parent.addEventListener("mouseenter", () => {
-        gsap.to(parent, {
-          backgroundColor: "#2249CA",
-          duration: 0.3,
-          ease: "power1.out",
-        });
         gsap.to(titelCard, {
           bottom: "15rem",
           duration: 0.5,
@@ -37,11 +32,6 @@ const Division = () => {
         });
       });
       parent.addEventListener("mouseleave", () => {
-        gsap.to(parent, {
-          backgroundColor: "#FFFFFF",
-          duration: 0.3,
-          ease: "power1.out",
-        });
         gsap.to(titelCard, {
           bottom: "6rem",
           duration: 0.5,
@@ -71,7 +61,7 @@ const Division = () => {
         {DataDivision.map((division, index) => (
           <div
             key={index}
-            className="relative border border-neutral-200 w-150 h-105 rounded-3xl group division-parent-card"
+            className={`relative border border-neutral-200 hover:bg-${division.backgroundColor} transition-colors duration-300 w-150 h-105 rounded-3xl group division-parent-card`}
           >
             <img
               src={division.image}
@@ -79,17 +69,25 @@ const Division = () => {
               className="w-auto h-34 absolute top-12 left-12 division-image-card"
             />
             <div className="flex flex-col gap-2 absolute bottom-24 left-12 division-title-card">
-              <h1 className="text-6xl font-black tracking-tight text-neutral-900 group-hover:text-blue-100">
+              <h1
+                className={`text-6xl font-black tracking-tight text-neutral-900 group-hover:text-${division.textColor}`}
+              >
                 {division.name}
               </h1>
-              <h3 className="text-lg font-medium text-neutral-500 group-hover:text-blue-100">
+              <h3
+                className={`text-lg font-medium text-neutral-500 group-hover:text-${division.textColor}`}
+              >
                 "{division.tagline}"
               </h3>
             </div>
-            <p className="absolute bottom-26 pl-12 pr-24 text-lg font-medium text-blue-100 opacity-0 group-hover:opacity-100 transition-opacity duration-100">
+            <p
+              className={`absolute bottom-26 pl-12 pr-24 text-lg font-medium text-${division.textColor} opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
+            >
               {division.description}
             </p>
-            <div className="text-neutral-400 group-hover:text-blue-100 text-lg flex items-center gap-2 absolute bottom-8 left-12">
+            <div
+              className={`text-neutral-400 group-hover:text-${division.textColor} text-lg flex items-center gap-2 absolute bottom-8 left-12`}
+            >
               <Icon icon={division.icon} />
               <span className="font-medium">{division.focus}</span>
             </div>
