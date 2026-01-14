@@ -1,4 +1,5 @@
 import About from "./sections/about/About";
+import Division from "./sections/divisions/Division";
 import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
 import Navbar from "./sections/navbar/Navbar";
@@ -16,10 +17,13 @@ const App = () => {
       <div className="bg-[#FBF9FF]" id="about">
         <About />
       </div>
-      <div> 
+      <div>
+        <Division />
+      </div>
+      <div>
         <Programs />
       </div>
-      <div> 
+      <div>
         <Footer />
       </div>
     </div>
