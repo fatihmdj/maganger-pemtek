@@ -3,6 +3,7 @@ import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
 import Navbar from "./sections/navbar/Navbar";
 import Programs from "./sections/programs/Programs";
+import MeetTheInterns from "./sections/meetTheInterns/meetTheInterns";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       </div>
       <div> 
         <Programs />
+      </div>
+      <div className="bg-[#fdfcff]" id="meetTheInterns">
+        <MeetTheInterns />
       </div>
       <div> 
         <Footer />
