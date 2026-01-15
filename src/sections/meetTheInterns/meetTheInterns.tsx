@@ -1,63 +1,76 @@
-const medKom = [
-  {
-    nama: "Alfann Naufal Rabbani",
-    peran: "Maganger MedKom",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto1.jpg",
-    quote: "\"Design is not just how it looks, but how it works.\""
-  },
-  {
-    nama: "Rahadyan Naufal Rabbani",
-    peran: "Maganger MedKom",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto2.jpg",
-    quote: "\"Design is not just how it looks, but how it works. is it?\""
-  },
-  {
-    nama: "Akmal Mustofa",
-    peran: "Maganger MedKom",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto3.jpg",
-    quote: "\"Design is not just how it looks, but how it works.\""
-  },
-  {
-    nama: "Angelina Jouly",
-    peran: "Maganger MedKom",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto4.jpg",
-    quote: "\"Design is not just how it looks, but how it works.\""  },
-];
+import anggota from "../data/anggota.json";
 
-const pemTek = [
-  {
-    nama: "Muhammad Aqiel Adhi R",
-    peran: "Maganger PemTek",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto1.jpg",
-    quote: "\"As long as it works, it works.\""
-  },
-  {
-    nama: "Axel Christian Nugraha",
-    peran: "Maganger PemTek",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto2.jpg",
-    quote: "\"As long as it works, it works.\""
-  },
-  {
-    nama: "Akmal Mustofa",
-    peran: "Maganger PemTek",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto3.jpg",
-    quote: "\"As long as it works, it works.\""
-  },
-  {
-    nama: "Angelina Jouly",
-    peran: "Maganger PemTek",
-    angkatan: "Informatika 2025",
-    foto: "/anggota/foto4.jpg",
-    quote: "\"As long as it works, it works.\""
-  },
-];
+const medKom = anggota.medKom as anggota[];
+const pemTek = anggota.pemTek as anggota[];
+
+type anggota = {
+  nama: string;
+  peran: string;
+  angkatan: string;
+  foto: string;
+  quote: string;
+};
+
+// const medKom = [
+//   {
+//     nama: "Alfann Naufal Rabbani",
+//     peran: "Maganger MedKom",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto1.jpg",
+//     quote: "\"Design is not just how it looks, but how it works.\""
+//   },
+//   {
+//     nama: "Rahadyan Naufal Rabbani",
+//     peran: "Maganger MedKom",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto2.jpg",
+//     quote: "\"Design is not just how it looks, but how it works. is it?\""
+//   },
+//   {
+//     nama: "Akmal Mustofa",
+//     peran: "Maganger MedKom",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto3.jpg",
+//     quote: "\"Design is not just how it looks, but how it works.\""
+//   },
+//   {
+//     nama: "Angelina Jouly",
+//     peran: "Maganger MedKom",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto4.jpg",
+//     quote: "\"Design is not just how it looks, but how it works.\""  },
+// ];
+
+// const pemTek = [
+//   {
+//     nama: "Muhammad Aqiel Adhi R",
+//     peran: "Maganger PemTek",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto1.jpg",
+//     quote: "\"As long as it works, it works.\""
+//   },
+//   {
+//     nama: "Axel Christian Nugraha",
+//     peran: "Maganger PemTek",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto2.jpg",
+//     quote: "\"As long as it works, it works.\""
+//   },
+//   {
+//     nama: "Akmal Mustofa",
+//     peran: "Maganger PemTek",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto3.jpg",
+//     quote: "\"As long as it works, it works.\""
+//   },
+//   {
+//     nama: "Angelina Jouly",
+//     peran: "Maganger PemTek",
+//     angkatan: "Informatika 2025",
+//     foto: "/anggota/foto4.jpg",
+//     quote: "\"As long as it works, it works.\""
+//   },
+// ];
 
 export default function meetTheInterns() {
   return (
