@@ -1,0 +1,30 @@
+[
+    {
+    "judul": "Behind The Scenes",
+    "decription":"Bukan sekadar magang, tapi proses belajar, bertumbuh, dan berkarya bersama."
+    },
+  {
+    "name": "Left Images",
+    "image": "/acara/Component2.png",
+    "data": "13 Desember 2025",
+    "TITLE": "Seminar IT4 School"
+  },
+    {
+    "name": "Center Images (POSTER)",
+    "image": "/acara/Component3.png",
+    "data": "13 Desember 2025",
+    "TITLE": "Seminar IT4 School"
+  },
+    {
+    "name": "Center Images (POSTER)",
+    "image": "/acara/Component4.png",
+    "data": "13 Desember 2025",
+    "TITLE": "Seminar IT4 School"
+  },
+    {
+    "name": "Right Images",
+    "image": "/acara/Component5.png",
+    "data": "13 Desember 2025",
+    "TITLE": "Seminar IT4 School"
+  }
+]
