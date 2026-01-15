@@ -5,7 +5,6 @@ import Hero from "./sections/hero/Hero";
 import Navbar from "./sections/navbar/Navbar";
 import Programs from "./sections/programs/Programs";
 import MeetTheInterns from "./sections/meetTheInterns/meetTheInterns";
-import Bts from "./sections/bts/Bts";
 import Mentor from "./sections/mentor/Mentor";
 import BehindTheScenes from "./sections/behindTheScenes/BehindTheScenes";
 
@@ -32,9 +31,6 @@ const App = () => {
       </div>
       <div className="bg-[#fdfcff]" id="meetTheInterns">
         <BehindTheScenes />
-      </div>
-      <div>
-        <Bts />
       </div>
       <div>
         <Mentor />
