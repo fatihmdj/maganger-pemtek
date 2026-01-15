@@ -5,6 +5,7 @@ import Hero from "./sections/hero/Hero";
 import Navbar from "./sections/navbar/Navbar";
 import Programs from "./sections/programs/Programs";
 import MeetTheInterns from "./sections/meetTheInterns/meetTheInterns";
+import BehindTheScenes from "./sections/behindTheScenes/BehindTheScenes";
 
 const App = () => {
   return (
@@ -26,6 +27,9 @@ const App = () => {
       </div>
       <div className="bg-[#fdfcff]" id="meetTheInterns">
         <MeetTheInterns />
+      </div>
+      <div className="bg-[#fdfcff]" id="meetTheInterns">
+        <BehindTheScenes />
       </div>
       <div>
         <Footer />
