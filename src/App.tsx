@@ -7,6 +7,7 @@ import Programs from "./sections/programs/Programs";
 import MeetTheInterns from "./sections/meetTheInterns/meetTheInterns";
 import Bts from "./sections/bts/Bts";
 import Mentor from "./sections/mentor/Mentor";
+import BehindTheScenes from "./sections/behindTheScenes/BehindTheScenes";
 
 const App = () => {
   return (
@@ -20,14 +21,17 @@ const App = () => {
       <div className="bg-[#FBF9FF]" id="about">
         <About />
       </div>
-      <div>
+      <div id="divisions">
         <Division />
       </div>
-      <div>
+      <div id="proker">
         <Programs />
       </div>
       <div className="bg-[#fdfcff]" id="meetTheInterns">
         <MeetTheInterns />
+      </div>
+      <div className="bg-[#fdfcff]" id="meetTheInterns">
+        <BehindTheScenes />
       </div>
       <div>
         <Bts />
