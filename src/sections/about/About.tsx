@@ -2,9 +2,9 @@ const About = () => {
   return (
     <div className="flex justify-between max-w-300 mx-auto py-24">
       <div>
-        <div className="text-6xl font-black">
+        <div className="text-6xl font-black text-black">
           <h1 className="">Tentang Kemenko</h1>
-          <h1 className="mt-4">
+          <h1 className="mt-4 text-black">
             <span className="text-blue-700">Med</span>tek
           </h1>
         </div>
