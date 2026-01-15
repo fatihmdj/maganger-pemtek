@@ -13,7 +13,7 @@ const Mentor = () => {
                 mengubah 'magang' menjadi sebuah perjalanan penemuan jati diri.
                 </h3>
             </div>
-            <div className="my-16 rounded-2xl h-fit p-12 shadow-xl">
+            <div className="my-16 rounded-2xl h-fit p-12 shadow-xl border-neutral-100 border-2">
                 <h1 className="text-2xl font-medium leading-relaxed bg-linear-to-r from-[#2249CA] to-[#C15E20] bg-clip-text text-transparent">
                     "Terima kasih telah menjadi kompas bagi kreativitas kami yang terkadang liar, dan menjadi debugger bagi logika kami yang terkadang buntu. Bimbingan kalian bukan hanya tentang skill teknis, tapi tentang bagaimana berkarya dengan hati."
                 </h1>
