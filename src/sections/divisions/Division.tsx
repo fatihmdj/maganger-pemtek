@@ -61,7 +61,13 @@ const Division = () => {
         {DataDivision.map((division, index) => (
           <div
             key={index}
-            className={`relative border border-neutral-200 hover:bg-${division.backgroundColor} transition-colors duration-300 w-150 h-105 rounded-3xl group division-parent-card`}
+            className={`relative border border-neutral-200 transition-colors duration-300 w-150 h-105 rounded-3xl group division-parent-card cursor-pointer`}
+            style={
+              {
+                "--text-color": division.textColor,
+                "--card-bg": division.backgroundColor,
+              } as React.CSSProperties
+            }
           >
             <img
               src={division.image}
@@ -70,23 +76,26 @@ const Division = () => {
             />
             <div className="flex flex-col gap-2 absolute bottom-24 left-12 division-title-card">
               <h1
-                className={`text-6xl font-black tracking-tight text-neutral-900 group-hover:text-${division.textColor}`}
+                className={`text-6xl font-black tracking-tight text-neutral-900 division-text`}
               >
                 {division.name}
               </h1>
               <h3
-                className={`text-lg font-medium text-neutral-500 group-hover:text-${division.textColor}`}
+                className={`text-lg font-medium text-neutral-500 division-text`}
               >
                 "{division.tagline}"
               </h3>
             </div>
             <p
-              className={`absolute bottom-26 pl-12 pr-24 text-lg font-medium text-${division.textColor} opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
+              className={`absolute bottom-26 pl-12 pr-24 text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
+              style={{
+                color: division.textColor,
+              }}
             >
               {division.description}
             </p>
             <div
-              className={`text-neutral-400 group-hover:text-${division.textColor} text-lg flex items-center gap-2 absolute bottom-8 left-12`}
+              className={`text-neutral-400 division-text text-lg flex items-center gap-2 absolute bottom-8 left-12`}
             >
               <Icon icon={division.icon} />
               <span className="font-medium">{division.focus}</span>
