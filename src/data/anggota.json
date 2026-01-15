@@ -1,0 +1,63 @@
+{
+  "medKom": [
+    {
+      "nama": "Alfann Naufal Rabbani",
+      "peran": "Maganger MedKom",
+      "angkatan": "Informatika 2025",
+      "foto": "foto1.jpg",
+      "quote": "\"Design is not just how it looks, but how it works.\""
+    },
+    {
+      "nama": "Rahadyan Naufal Rabbani",
+      "peran": "Maganger MedKom",
+      "angkatan": "Informatika 2025",
+      "foto": "foto2.jpg",
+      "quote": "\"Design is not just how it looks, but how it works. Is it?\""
+    },
+    {
+      "nama": "Akmal Mustofa",
+      "peran": "Maganger MedKom",
+      "angkatan": "Informatika 2025",
+      "foto": "foto3.jpg",
+      "quote": "\"Design is not just how it looks, but how it works.\""
+    },
+    {
+      "nama": "Angelina Jouly",
+      "peran": "Maganger MedKom",
+      "angkatan": "Informatika 2025",
+      "foto": "",
+      "quote": "\"Design is not just how it looks, but how it works.\""
+    }
+  ],
+
+  "pemTek": [
+    {
+      "nama": "Muhammad Aqiel Adhi R",
+      "peran": "Maganger PemTek",
+      "angkatan": "Informatika 2025",
+      "foto": "foto4.jpg",
+      "quote": "\"As long as it works, it works.\""
+    },
+    {
+      "nama": "Muhammad Aqiel Adhi R",
+      "peran": "Maganger PemTek",
+      "angkatan": "Informatika 2025",
+      "foto": "foto2.jpg",
+      "quote": "\"As long as it works, it works.\""
+    },
+    {
+      "nama": "Muhammad Aqiel Adhi R",
+      "peran": "Maganger PemTek",
+      "angkatan": "Informatika 2025",
+      "foto": "foto3.jpg",
+      "quote": "\"As long as it works, it works.\""
+    },
+    {
+      "nama": "Muhammad Aqiel Adhi R",
+      "peran": "Maganger PemTek",
+      "angkatan": "Informatika 2025",
+      "foto": "",
+      "quote": "\"As long as it works, it works.\""
+    }
+  ]
+}
