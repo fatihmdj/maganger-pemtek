@@ -1,7 +1,4 @@
-import anggota from "../data/anggota.json";
-
-const medKom = anggota.medKom as anggota[];
-const pemTek = anggota.pemTek as anggota[];
+import anggota from "../../data/anggota.json";
 
 type anggota = {
   nama: string;
@@ -11,66 +8,8 @@ type anggota = {
   quote: string;
 };
 
-// const medKom = [
-//   {
-//     nama: "Alfann Naufal Rabbani",
-//     peran: "Maganger MedKom",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto1.jpg",
-//     quote: "\"Design is not just how it looks, but how it works.\""
-//   },
-//   {
-//     nama: "Rahadyan Naufal Rabbani",
-//     peran: "Maganger MedKom",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto2.jpg",
-//     quote: "\"Design is not just how it looks, but how it works. is it?\""
-//   },
-//   {
-//     nama: "Akmal Mustofa",
-//     peran: "Maganger MedKom",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto3.jpg",
-//     quote: "\"Design is not just how it looks, but how it works.\""
-//   },
-//   {
-//     nama: "Angelina Jouly",
-//     peran: "Maganger MedKom",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto4.jpg",
-//     quote: "\"Design is not just how it looks, but how it works.\""  },
-// ];
-
-// const pemTek = [
-//   {
-//     nama: "Muhammad Aqiel Adhi R",
-//     peran: "Maganger PemTek",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto1.jpg",
-//     quote: "\"As long as it works, it works.\""
-//   },
-//   {
-//     nama: "Axel Christian Nugraha",
-//     peran: "Maganger PemTek",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto2.jpg",
-//     quote: "\"As long as it works, it works.\""
-//   },
-//   {
-//     nama: "Akmal Mustofa",
-//     peran: "Maganger PemTek",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto3.jpg",
-//     quote: "\"As long as it works, it works.\""
-//   },
-//   {
-//     nama: "Angelina Jouly",
-//     peran: "Maganger PemTek",
-//     angkatan: "Informatika 2025",
-//     foto: "/anggota/foto4.jpg",
-//     quote: "\"As long as it works, it works.\""
-//   },
-// ];
+const medKom = anggota.medKom as anggota[];
+const pemTek = anggota.pemTek as anggota[];
 
 export default function meetTheInterns() {
   return (
@@ -106,7 +45,7 @@ export default function meetTheInterns() {
               className="relative h-[420px] rounded-3xl overflow-hidden group shadow-lg">
                 
               <img
-                src={p.foto}
+                src={`/anggota/${p.foto}`}
                 alt={p.nama}
                 className="w-full h-full object-cover"
                 />
@@ -181,10 +120,10 @@ export default function meetTheInterns() {
                     >
                     
                 <img
-                    src={p.foto}
-                    alt={p.nama}
-                    className="w-full h-full object-cover"
-                    />
+                  src={`/anggota/${p.foto}`}
+                  alt={p.nama}
+                  className="w-full h-full object-cover"
+                  />
 
                 {/* BLACK GRADIENT (default) */}
                 <div
