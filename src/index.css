@@ -23,6 +23,14 @@ body {
   background-image: linear-gradient(to right, #2249ca, #c15e20);
 }
 
+/* Division Section */
+.division-parent-card:hover {
+  background: var(--card-bg);
+}
+.division-parent-card:hover .division-text {
+  color: var(--text-color);
+}
+
 /* Meet The Interns Section*/
 .bg-boxed-pattern1 {
   background-color: #fdfcff;
