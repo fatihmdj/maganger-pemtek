@@ -24,7 +24,7 @@ const App = () => {
       <div id="proker">
         <Programs />
       </div>
-      <div className="bg-[#fdfcff]" id="team">
+      <div className="bg-[#fdfcff]" id="meetTheInterns">
         <MeetTheInterns />
       </div>
       <div>
