@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar } from "lucide-react";
+import bts from "../../data/bts.json";
 
 gsap.registerPlugin(ScrollTrigger);
+
 
 interface CardItemProps {
   img: string;
@@ -11,10 +13,54 @@ interface CardItemProps {
   date: string;
   className?: string;
   style?: React.CSSProperties;
+  onTap?: () => void;
+  isActive?: boolean;
 }
+
+const CardItem: React.FC<CardItemProps> = ({
+  img,
+  title,
+  date,
+  className = "",
+  style,
+  onTap,
+  isActive = false,
+}) => (
+  <div
+    style={style}
+    className={`bts-card group relative overflow-hidden rounded-2xl shadow-lg ${className}`}
+    onClick={onTap}
+  >
+    <img
+      src={img}
+      alt={title}
+      className="w-full h-full object-cover object-top transition-all duration-500
+        group-hover:scale-105"
+    />
+
+    <div
+      className={`absolute inset-0 transition-all duration-500
+        ${isActive ? "bg-black/50" : "bg-black/0"}
+        group-hover:bg-black/50`}
+    />
+
+    <div
+      className={`absolute bottom-0 left-0 right-0 p-5 text-white transition-all duration-500
+        ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
+        group-hover:translate-y-0 group-hover:opacity-100`}
+    >
+      <h3 className="text-lg font-bold tracking-wide">{title}</h3>
+      <div className="flex items-center gap-2 text-sm text-gray-200 mt-1">
+        <Calendar size={16} />
+        <span>{date}</span>
+      </div>
+    </div>
+  </div>
+);
 
 const BehindTheScenes = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -38,90 +84,61 @@ const BehindTheScenes = () => {
     return () => ctx.revert();
   }, []);
 
-  const CardItem: React.FC<CardItemProps> = ({
-    img,
-    title,
-    date,
-    className = "",
-    style,
-  }) => (
-    <div
-      style={style}
-      className={`bts-card group relative overflow-hidden rounded-2xl shadow-lg ${className}`}
-    >
-      {/* Image */}
-      <img
-        src={img}
-        alt={title}
-        className="w-full h-full object-cover object-top
-        transition-all duration-500
-        group-hover:scale-105"
-      />
+  const header = bts[0];
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/0 transition-all duration-500 group-hover:bg-black/50" />
-
-      {/* Info */}
-      <div
-        className="absolute bottom-0 left-0 right-0 p-5 text-white
-        translate-y-10 opacity-0 transition-all duration-500
-        group-hover:translate-y-0 group-hover:opacity-100"
-      >
-        <h3 className="text-lg font-bold tracking-wide">{title}</h3>
-        <div className="flex items-center gap-2 text-sm text-gray-200 mt-1">
-          <Calendar size={16} />
-          <span>{date}</span>
-        </div>
-      </div>
-    </div>
-  );
+  const cards = bts.slice(1);
+  const left = cards.find(item => item.name?.includes("Left"))!;
+  const center = cards.filter(item => item.name?.includes("Center"));
+  const right = cards.find(item => item.name?.includes("Right"))!;
 
   return (
-    <section
-      ref={sectionRef}
-      className="max-w-7xl mx-auto px-6 py-20"
-    >
+    <section ref={sectionRef} className="max-w-7xl mx-auto px-6 py-20">
       {/* Header */}
       <div className="text-left mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Behind The Scenes
+          {header.judul}
         </h2>
-        <p className="text-gray-500 mt-3">
-          Bukan sekadar magang, tapi proses belajar, bertumbuh, dan berkarya bersama.
-        </p>
+        <p className="text-gray-500 mt-3">{header.decription}</p>
       </div>
 
       {/* Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.8fr_1fr] gap-6 items-stretch">
         {/* Left */}
         <CardItem
-          img="/acara/Component2.png"
-          title="SEMINAR IT4 School"
-          date="13 Desember 2025"
+          img={left.image!}
+          title={left.TITLE!}
+          date={left.data!}
+          isActive={activeCard === 0}
+          onTap={() => setActiveCard(activeCard === 0 ? null : 0)}
         />
 
         {/* Center */}
         <div className="grid grid-rows-2 gap-6 h-full">
-          <CardItem
-            img="/acara/Component3.png"
-            title="SEMINAR IT4 School"
-            date="13 Desember 2025"
-          />
-          <CardItem
-            img="/acara/Component4.png"
-            title="SEMINAR IT4 School"
-            date="13 Desember 2025"
-          />
+          {center.map((item, idx) => (
+            <CardItem
+              key={idx}
+              img={item.image!}
+              title={item.TITLE!}
+              date={item.data!}
+              isActive={activeCard === idx + 1}
+              onTap={() =>
+                setActiveCard(activeCard === idx + 1 ? null : idx + 1)
+              }
+            />
+          ))}
         </div>
 
-        {/* Right — RUNCING */}
+        {/* Right */}
         <CardItem
-          img="/acara/Component5.png"
-          title="SEMINAR IT4 School"
-          date="13 Desember 2025"
-          style={{
-clipPath: "polygon(0 0, 82% 0, 90% 0%, 90% 100%, 100% 100%, 0 100%)",
-        }}
+          img={right.image!}
+          title={right.TITLE!}
+          date={right.data!}
+          isActive={activeCard === center.length + 1}
+          onTap={() =>
+            setActiveCard(
+              activeCard === center.length + 1 ? null : center.length + 1
+            )
+          }
         />
       </div>
     </section>
