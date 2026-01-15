@@ -1,3 +1,6 @@
+import { ChatTeardropTextIcon } from "@phosphor-icons/react"
+
+
 const Mentor = () => {
     return(
         <section className="px-32">
@@ -15,8 +18,41 @@ const Mentor = () => {
                     "Terima kasih telah menjadi kompas bagi kreativitas kami yang terkadang liar, dan menjadi debugger bagi logika kami yang terkadang buntu. Bimbingan kalian bukan hanya tentang skill teknis, tapi tentang bagaimana berkarya dengan hati."
                 </h1>
                 <div className="flex justify-between mt-24">
-                    <div>hai</div>
-                    <div>halo</div>
+                    <div className="flex gap-5">
+                        <div className="w-fit h-fit p-3 rounded-full bg-linear-to-r from-[#2249CA] to-[#C15E20]">
+                            <ChatTeardropTextIcon size={32} color="white" weight="fill"/>
+                        </div>
+                        <div className="w-fit h-full">
+                            <h1 className="tracking-tight text-neutral-900 text-lg font-bold">
+                                With Love & Respect
+                            </h1>
+                            <h3 className="font-medium text-neutral-400 text-lg">
+                                Maganger Medtek 2025
+                            </h3>
+                        </div>
+                    </div>
+                    <div className="avatar-group -space-x-6">
+                        <div className="avatar border-white">
+                            <div className="w-12">
+                            <img src="/public/anggota/foto1.jpg" className="object-top" />
+                            </div>
+                        </div>
+                        <div className="avatar border-white">
+                            <div className="w-12">
+                            <img src="/public/anggota/foto2.jpg" className="object-top" />
+                            </div>
+                        </div>
+                        <div className="avatar border-white">
+                            <div className="w-12">
+                            <img src="/public/anggota/foto3.jpg" className="object-top"/>
+                            </div>
+                        </div>
+                        <div className="avatar avatar-placeholder border-white">
+                            <div className="bg-linear-to-r from-[#2249CA] to-[#C15E20] text-neutral-content w-12 font-bold">
+                            <span>+5</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

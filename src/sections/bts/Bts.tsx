@@ -1,6 +1,6 @@
 const Bts = () => {
     return(
-        <section className="w-full py-32 ">
+        <section className="w-full py-32">
 
         </section>
     )

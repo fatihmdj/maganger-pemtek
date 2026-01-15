@@ -10,7 +10,7 @@ import Mentor from "./sections/mentor/Mentor";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-white">
       <div className="border-b border-b-neutral-200 fixed top-0 left-0 w-full bg-white z-50">
         <Navbar />
       </div>
