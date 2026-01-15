@@ -5,10 +5,13 @@ import Hero from "./sections/hero/Hero";
 import Navbar from "./sections/navbar/Navbar";
 import Programs from "./sections/programs/Programs";
 import MeetTheInterns from "./sections/meetTheInterns/meetTheInterns";
+import Bts from "./sections/bts/Bts";
+import Mentor from "./sections/mentor/Mentor";
+import BehindTheScenes from "./sections/behindTheScenes/BehindTheScenes";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-white">
       <div className="border-b border-b-neutral-200 fixed top-0 left-0 w-full bg-white z-50">
         <Navbar />
       </div>
@@ -18,14 +21,23 @@ const App = () => {
       <div className="bg-[#FBF9FF]" id="about">
         <About />
       </div>
-      <div>
+      <div id="divisions">
         <Division />
       </div>
-      <div>
+      <div id="proker">
         <Programs />
       </div>
       <div className="bg-[#fdfcff]" id="meetTheInterns">
         <MeetTheInterns />
+      </div>
+      <div className="bg-[#fdfcff]" id="meetTheInterns">
+        <BehindTheScenes />
+      </div>
+      <div>
+        <Bts />
+      </div>
+      <div>
+        <Mentor />
       </div>
       <div>
         <Footer />
