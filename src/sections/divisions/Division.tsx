@@ -1,9 +1,16 @@
 import { useEffect } from "react";
-import DataDivision from "../../data/divisions.json";
 import { Icon } from "@iconify/react";
+import DataDivision from "../../data/divisions.json";
 import gsap from "gsap";
+import MedkomIcon from "../../assets/icons/MedkomIcon.avif";
+import PemtekIcon from "../../assets/icons/PemtekIcon.avif";
 
 const Division = () => {
+  const iconMap: { [key: string]: string } = {
+    medkom: MedkomIcon,
+    pemtek: PemtekIcon,
+  };
+
   useEffect(() => {
     const parents = gsap.utils.toArray(
       ".division-parent-card"
@@ -70,7 +77,7 @@ const Division = () => {
             }
           >
             <img
-              src={division.image}
+              src={iconMap[division.image]}
               alt="icon-medkom-bem-fatisda-uns"
               className="w-auto h-34 absolute top-12 left-12 division-image-card"
             />
