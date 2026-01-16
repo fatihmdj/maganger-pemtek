@@ -1,5 +1,4 @@
-import { ChatTeardropTextIcon } from "@phosphor-icons/react"
-
+import { Icon } from "@iconify/react";
 
 const Mentor = () => {
     return(
@@ -23,7 +22,7 @@ const Mentor = () => {
                 <div className="flex justify-between mt-6 md:mt-12 lg:mt-24 items-center">
                     <div className="flex gap-2 lg:gap-5">
                         <div className="w-fit h-fit p-2 lg:p-3 rounded-full bg-linear-to-r from-[#2249CA] to-[#C15E20]">
-                            <ChatTeardropTextIcon className="w-4 h-4 md:h-6 md:w-6 lg:h-8 lg:w-8" color="white" weight="fill"/>
+                            <Icon icon="material-symbols:chat" className="w-4 h-4 md:h-6 md:w-6 lg:h-8 lg:w-8" color="white"/>
                         </div>
                         <div className="w-fit h-full mt-1 md:mt-0">
                             <h1 className="tracking-tight text-neutral-900 text-[8px] md:text-sm lg:text-lg font-bold">
