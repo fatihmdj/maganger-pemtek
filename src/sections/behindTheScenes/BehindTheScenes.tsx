@@ -51,7 +51,7 @@ const CardItem: React.FC<CardItemProps> = ({
     >
       <h3 className="text-lg font-bold tracking-wide">{title}</h3>
       <div className="flex items-center gap-2 text-sm text-gray-200 mt-1">
-        <Icon icon = "material-symbols:calendar-today-outline-rounded size={16}" />
+        <Icon icon = "material-symbols:calendar-today-outline-rounded" />
         <span>{date}</span>
       </div>
     </div>
