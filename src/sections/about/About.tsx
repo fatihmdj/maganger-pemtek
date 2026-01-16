@@ -1,3 +1,6 @@
+import MedkomLogo from "../../assets/logo/Medkom.avif";
+import PemtekLogo from "../../assets/logo/Pemtek.avif";
+
 const About = () => {
   return (
     <div className="flex justify-between max-w-300 mx-auto py-24">
@@ -23,14 +26,14 @@ const About = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <div className="flex w-fit h-68 bg-white rounded-xl px-8 py-12 gap-4 border border-neutral-100">
+        <div className="flex w-fit h-68 bg-white rounded-xl px-8 py-12 gap-8 border border-neutral-100">
           <img
-            src="/logo/Medkom.png"
+            src={MedkomLogo}
             alt="Logo media dan komunikasi"
             className="h-full w-fit"
           />
           <img
-            src="/logo/Pemtek.png"
+            src={PemtekLogo}
             alt="Logo pengembangan teknologi"
             className="h-full w-fit"
           />
