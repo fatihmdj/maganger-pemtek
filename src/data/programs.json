@@ -1,0 +1,49 @@
+{
+  "programs": [
+    {
+      "category": "Pengembangan Teknologi",
+      "title": "IT4SCHOOL",
+      "description": "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
+      "titleColor": "blue"
+    },
+    {
+      "category": "Pengembangan Teknologi",
+      "title": "Website Maganger",
+      "description": "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
+      "titleColor": "blue"
+    },
+    {
+      "category": "Media Teknologi",
+      "title": "Design IT4SCHOOL",
+      "description": "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
+      "titleColor": "orange"
+    }
+  ],
+
+  "topBarItems": [
+    { "type": "icon", "variant": "medkomExpand" },
+    { "type": "text", "content": "Maganger BEM" },
+    { "type": "icon", "variant": "medkomExpand" },
+    { "type": "text", "content": "Maganger Medtek 2025" },
+    { "type": "icon", "variant": "medkomExpand" },
+    { "type": "text", "content": "Media Teknologi" },
+    { "type": "icon", "variant": "medkomExpand" },
+    { "type": "text", "content": "Design" },
+    { "type": "icon", "variant": "medkomExpand" },
+    { "type": "text", "content": "Social Media" }
+  ],
+
+  "bottomBarItems": [
+    { "type": "icon", "variant": "pemtekExpand" },
+    { "type": "text", "content": "Maganger BEM" },
+    { "type": "icon", "variant": "pemtekExpand" },
+    { "type": "text", "content": "Maganger Pemtek 2025" },
+    { "type": "icon", "variant": "pemtekExpand" },
+    { "type": "text", "content": "Pengembangan Website" },
+    { "type": "icon", "variant": "pemtekExpand" },
+    { "type": "text", "content": "IT4SCHOOL" }
+  ]
+}
