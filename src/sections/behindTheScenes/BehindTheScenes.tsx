@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Calendar } from "lucide-react";
+import { Icon } from "@iconify/react";
 import bts from "../../data/bts.json";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -51,7 +51,7 @@ const CardItem: React.FC<CardItemProps> = ({
     >
       <h3 className="text-lg font-bold tracking-wide">{title}</h3>
       <div className="flex items-center gap-2 text-sm text-gray-200 mt-1">
-        <Calendar size={16} />
+        <Icon icon = "material-symbols:calendar-today-outline-rounded" />
         <span>{date}</span>
       </div>
     </div>

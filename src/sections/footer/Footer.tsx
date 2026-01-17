@@ -1,4 +1,4 @@
-import { Instagram, Mail, Linkedin } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const Footer = () => {
   return (
@@ -48,7 +48,7 @@ const Footer = () => {
                   aria-label="Instagram"
                   className="w-12.5 h-12.5 rounded-full bg-white/11 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-colors"
                 >
-                  <Instagram className="w-6 h-6 text-[#B2B2B2]" />
+                  <Icon icon="simple-icons:instagram" className="w-6 h-6 text-[#B2B2B2]" />
                 </a>
 
                 <a
@@ -56,7 +56,7 @@ const Footer = () => {
                   aria-label="Email"
                   className="w-12.5 h-12.5 rounded-full bg-white/11 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-colors"
                 >
-                  <Mail className="w-6 h-6 text-[#B2B2B2]" />
+                  <Icon icon="material-symbols:mail-rounded" className="w-6 h-6 text-[#B2B2B2]" />
                 </a>
 
                 <a
@@ -64,7 +64,7 @@ const Footer = () => {
                   aria-label="LinkedIn"
                   className="w-12.5 h-12.5 rounded-full bg-white/11 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-colors"
                 >
-                  <Linkedin className="w-6 h-6 text-[#B2B2B2]" />
+                  <Icon icon="brandico:linkedin" className="w-6 h-6 text-[#B2B2B2]" />
                 </a>
               </div>
             </div>

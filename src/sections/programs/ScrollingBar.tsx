@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-import medkomExpand from "../../assets/medkomExpand.svg";
-import pemtekExpand from "../../assets/pemtekExpand.svg";
+import medkomExpand from "../../assets/icons/medkomExpand.svg";
+import pemtekExpand from "../../assets/icons/pemtekExpand.svg";
 
 interface BarItem {
   type: "text" | "icon";

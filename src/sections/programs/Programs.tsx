@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import ProgramCard from "./ProgramCard";
 import ScrollingBar from "./ScrollingBar";
 
+import data from "../../data/programs.json";
+
 interface Program {
   category: string;
   title: string;
@@ -11,77 +13,13 @@ interface Program {
   titleColor: "blue" | "orange";
 }
 
-const programsData: Program[] = [
-  {
-    category: "Pengembangan Teknologi",
-    title: "IT4SCHOOL",
-    description:
-      "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
-    titleColor: "blue",
-  },
-  {
-    category: "Pengembangan Teknologi",
-    title: "Website Maganger",
-    description:
-      "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
-    titleColor: "blue",
-  },
-  {
-    category: "Media Teknologi",
-    title: "Design IT4SCHOOL",
-    description:
-      "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
-    titleColor: "orange",
-  },
-  {
-    category: "Pengembangan Teknologi",
-    title: "Website Maganger",
-    description:
-      "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
-    titleColor: "blue",
-  },
-  {
-    category: "Media Teknologi",
-    title: "Design IT4SCHOOL",
-    description:
-      "Seminar online dengan mengundang beberapa pembicara di bidang IT guna meningkatkan pemahaman IT di kalangan..",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL5s2M3bX2GjeJoXuvXCO4rUXkSKXCDhkXrw&s",
-    titleColor: "orange",
-  },
-];
+type ScrollingBarItem =
+  | { type: "icon"; variant: "medkomExpand" | "pemtekExpand" }
+  | { type: "text"; content: string };
 
-const topBarItems = [
-  { type: "icon", variant: "medkomExpand" },
-  { type: "text", content: "Maganger BEM" },
-  { type: "icon", variant: "medkomExpand" },
-  { type: "text", content: "Maganger Medtek 2025" },
-  { type: "icon", variant: "medkomExpand" },
-  { type: "text", content: "Media Teknologi" },
-  { type: "icon", variant: "medkomExpand" },
-  { type: "text", content: "Design" },
-  { type: "icon", variant: "medkomExpand" },
-  { type: "text", content: "Social Media" },
-] as const;
-
-const bottomBarItems = [
-  { type: "icon", variant: "pemtekExpand" },
-  { type: "text", content: "Maganger BEM" },
-  { type: "icon", variant: "pemtekExpand" },
-  { type: "text", content: "Maganger Pemtek 2025" },
-  { type: "icon", variant: "pemtekExpand" },
-  { type: "text", content: "Pengembangan Website" },
-  { type: "icon", variant: "pemtekExpand" },
-  { type: "text", content: "IT4SCHOOL" },
-] as const;
+const programsData: Program[] = data.programs as Program[];
+const topBarItems = data.topBarItems as ScrollingBarItem[];
+const bottomBarItems = data.bottomBarItems as ScrollingBarItem[];
 
 const Programs = () => {
   const cardsContainerRef = useRef<HTMLDivElement>(null);
