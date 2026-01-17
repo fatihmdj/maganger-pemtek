@@ -47,9 +47,9 @@ export default function meetTheInterns() {
           {medKom.map((p, i) => (
             <div
               key={i}
-              className="relative h-[280px] md:h-[350px] lg:h-[420px]
-              relative w-[210px] md:w-[262.5px] lg:w-[315px]
-              rounded-3xl overflow-hidden group shadow-lg">
+              className="relative h-[213.3px] md:h-[350px] lg:h-[420px]
+                         relative w-[160px] md:w-[262.5px] lg:w-[315px]
+                         rounded-3xl overflow-hidden group shadow-lg">
                 
               <img
                 src={`/anggota/${p.foto}`}
@@ -80,20 +80,21 @@ export default function meetTheInterns() {
                 />
 
             {/* text wrapper */}
-            <div className="text-white absolute bottom-3 left-3 right-3
-                            md:bottom-3 md:left-4 md:right-4
-                            lg:bottom-4 lg:left-3 lg:right-6">
+            <div className="text-white absolute
+                            bottom-2 left-2 right-2
+                            md:bottom-3 md:left-2 md:right-2
+                            lg:bottom-4 lg:left-3 lg:right-3">
               {/* Information Block */}
               <div className="transition-all duration-700 group-hover:translate-y-[50px] group-hover:opacity-0
                               group-active:opacity-0 group-active:translate-y-[50px]">
-                  <p className="text-sm md:text-base lg:text-lg">{p.peran}</p>
-                      <h3 className="text-base md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
-                  <p className="text-xs md:text-xs lg:text-sm">{p.angkatan}</p>
+                  <p className="text-xs md:text-base lg:text-lg">{p.peran}</p>
+                      <h3 className="text-sm md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
+                  <p className="text-xs md:text-xs lg:text-base">{p.angkatan}</p>
               </div>
             </div>
-            <div className="text-white absolute -bottom-10 left-3 right-3
-                            md:bottom-3 md:left-4 md:right-4
-                            lg:bottom-4 lg:left-3 lg:right-6">
+            <div className="text-white absolute -bottom-10 left-2 right-2
+                            md:bottom-3 md:left-2 md:right-2
+                            lg:bottom-4 lg:left-3 lg:right-3">
                 {/* Quotes Block */}
                 <div className="
                     flex gap-2
@@ -108,7 +109,7 @@ export default function meetTheInterns() {
                     <div className="w-[2px] bg-white rounded-full"></div>
 
                     {/* quote */}
-                    <p className="text-sm italic text-white/90 leading-relaxed">
+                    <p className="text-xs md:text-sm lg:text-lg italic text-white/90 leading-relaxed">
                         {p.quote}
                     </p>
                 </div>
@@ -140,9 +141,9 @@ export default function meetTheInterns() {
                 {pemTek.map((p, i) => (
                   <div
                     key={i}
-                    className="relative h-[280px] md:h-[350px] lg:h-[420px]
-                              relative w-[210px] md:w-[262.5px] lg:w-[315px]
-                              rounded-3xl overflow-hidden group shadow-lg">
+                    className="relative h-[213.3px] md:h-[350px] lg:h-[420px]
+                               relative w-[160px] md:w-[262.5px] lg:w-[315px]
+                               rounded-3xl overflow-hidden group shadow-lg">
                     
                 <img
                   src={`/anggota/${p.foto}`}
@@ -173,20 +174,21 @@ export default function meetTheInterns() {
                     />
 
             {/* text wrapper */}
-            <div className="text-white absolute bottom-3 left-3 right-3
-                            md:bottom-3 md:left-4 md:right-4
-                            lg:bottom-4 lg:left-3 lg:right-6">
+            <div className="text-white absolute
+                            bottom-2 left-2 right-2
+                            md:bottom-3 md:left-2 md:right-2
+                            lg:bottom-4 lg:left-3 lg:right-3">
               {/* Information Block */}
               <div className="transition-all duration-700 group-hover:translate-y-[50px] group-hover:opacity-0
                               group-active:opacity-0 group-active:translate-y-[50px]">
-                  <p className="text-sm md:text-base lg:text-lg">{p.peran}</p>
-                      <h3 className="text-base md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
-                  <p className="text-xs md:text-xs lg:text-sm">{p.angkatan}</p>
+                  <p className="text-xs md:text-base lg:text-lg">{p.peran}</p>
+                      <h3 className="text-sm md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
+                  <p className="text-xs md:text-xs lg:text-base">{p.angkatan}</p>
               </div>
             </div>
-            <div className="text-white absolute -bottom-10 left-3 right-3
-                            md:bottom-3 md:left-4 md:right-4
-                            lg:bottom-4 lg:left-3 lg:right-6">
+            <div className="text-white absolute -bottom-10 left-2 right-2
+                            md:bottom-3 md:left-2 md:right-2
+                            lg:bottom-4 lg:left-3 lg:right-3">
                 {/* Quotes Block */}
                 <div className="
                     flex gap-2
@@ -202,7 +204,7 @@ export default function meetTheInterns() {
                     <div className="w-[2px] bg-white rounded-full"></div>
 
                     {/* quote */}
-                    <p className="text-sm italic text-white/90 leading-relaxed">
+                    <p className="text-xs md:text-sm lg:text-lg italic text-white/90 leading-relaxed">
                         {p.quote}
                     </p>
                 </div>
