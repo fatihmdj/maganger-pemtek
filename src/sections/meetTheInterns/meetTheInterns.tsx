@@ -25,97 +25,95 @@ export default function meetTheInterns() {
                         mt-1 md:mt-3 lg:mt-5">
             Orang-orang di balik layar yang mengubah ide menjadi realita.
           </p>
-          
         </div>
 
         {/* Divider */}
-        <div className="flex items-center gap-6 my-5 md:my-12.5 lg:my-30">
-          <div className="flex-1 h-0.5 bg-gradient-to-r from-[#c05d20] to-[#54290e]" />
-          <p className="text-center text-xl md:text-2xl lg:text-3xl font-semibold
-            bg-gradient-to-r from-[#c05d20] to-[#54290e]
-            bg-clip-text text-transparent">
-            Creative Minds of MedKom
-          </p>
-          <div className="flex-1 h-0.5 bg-gradient-to-r from-[#c05d20] to-[#54290e]" />
+        <div className="flex items-center gap-6 my-5 md:my-12.5 lg:my-20
+                        mt-15 md:mt-12.5 lg:mt-30">
+            <div className="flex-1 h-0.5 bg-gradient-to-r from-[#c05d20] to-[#54290e]" />
+              <p className="text-center text-xl md:text-2xl lg:text-3xl font-semibold
+                            bg-gradient-to-r from-[#c05d20] to-[#54290e]
+                            bg-clip-text text-transparent">
+                            Creative Minds of MedKom
+              </p>
+            <div className="flex-1 h-0.5 bg-gradient-to-r from-[#c05d20] to-[#54290e]" />
         </div>  
 
         {/* Cards */}
         <div className="grid place-items-center
                         grid-cols-2 md:grid-cols-2 lg:grid-cols-3
-                        gap-14 md:gap-12 lg:gap-10
+                        gap-4 md:gap-7 lg:gap-10
                         my-10 md:my-5 lg:-my-5">
           {medKom.map((p, i) => (
             <div
               key={i}
-              className="relative">
+              className="relative h-[280px] md:h-[350px] lg:h-[420px]
+              relative w-[210px] md:w-[262.5px] lg:w-[315px]
+              rounded-3xl overflow-hidden group shadow-lg">
+                
+              <img
+                src={`/anggota/${p.foto}`}
+                alt={p.nama}
+                className="w-full h-full object-cover
+                          transition-transform
+                          duration-700
+                          group-hover:scale-105
+                          group-active:scale-105"/>
 
-              <div
-                tabIndex={0}
-                className="peer absolute inset-0 z-10 rounded-3xl cursor-pointer"
-              />
+            {/* BLACK GRADIENT (default) */}
+            <div
+            className="absolute inset-0
+                bg-gradient-to-t from-black/80 via-black/30 to-transparent
+                transition-opacity duration-700
+                group-hover:opacity-100
+                group-active:opacity-100"
+                />
 
-              <div
-                className="group h-[320px] md:h-[370px] lg:h-[420px]
-                          relative w-[240px] md:w-[277.5px] lg:w-[315px]
-                          rounded-3xl overflow-hidden shadow-lg">
-                  
-                <img
-                  src={`/anggota/${p.foto}`}
-                  alt={p.nama}
-                  className="w-full h-full object-cover"
-                  />
+            {/* ORANGE GRADIENT (hover) */}
+            <div
+            className="absolute inset-0
+                bg-gradient-to-t from-[#c05d20]/70 via-[#c05d20]/10 to-transparent
+                opacity-0
+                transition-opacity duration-700
+                group-hover:opacity-100
+                group-active:opacity-100"
+                />
 
-              {/* BLACK GRADIENT (default) */}
-              <div
-              className="absolute inset-0
-                  bg-gradient-to-t from-black/80 via-black/30 to-transparent
-                  transition-opacity duration-700
-                  group-hover:opacity-100
-                  peer-focus:opacity-100"
-                  />
-
-              {/* ORANGE GRADIENT (hover) */}
-              <div
-              className="absolute inset-0
-                  bg-gradient-to-t from-[#c05d20]/70 via-[#c05d20]/10 to-transparent
-                  opacity-0
-                  transition-opacity duration-700
-                  group-hover:opacity-100
-                  peer-focus:opacity-100"
-                  />
-
-              {/* text wrapper */}
-              <div className="text-white absolute bottom-0 left-2 right-2
-                              md:left-3 md:right-3
-                              lg:left-4 lg:right-4">
-                  {/* Information Block */}
-                  <div className="transition-all duration-700 group-hover:translate-y-[-40px] peer-focus:translate-y-[-40px]">
-                      <p className="text-sm md:text-base lg:text-lg">{p.peran}</p>
-                          <h3 className="text-base md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
-                      <p className="text-xs md:text-xs lg:text-sm">{p.angkatan}</p>
-                  </div>
-                  {/* Quotes Block */}
-                  <div className="
-                      flex gap-2
-                      opacity-0 translate-y-0
-                      transition-all duration-700 delay-150
-                      group-hover:opacity-100
-                      peer-focus:opacity-100
-                      group-hover:-translate-y-7
-                      peer-focus:-translate-y-7
-                      ">
-
-                      {/* vertical line */}
-                      <div className="w-[2px] bg-white rounded-full"></div>
-
-                      {/* quote */}
-                      <p className="text-sm italic text-white/90 leading-relaxed">
-                          {p.quote}
-                      </p>
-                  </div>
-              </div>
+            {/* text wrapper */}
+            <div className="text-white absolute bottom-3 left-3 right-3
+                            md:bottom-3 md:left-4 md:right-4
+                            lg:bottom-4 lg:left-3 lg:right-6">
+              {/* Information Block */}
+              <div className="transition-all duration-700 group-hover:translate-y-[50px] group-hover:opacity-0
+                              group-active:opacity-0 group-active:translate-y-[50px]">
+                  <p className="text-sm md:text-base lg:text-lg">{p.peran}</p>
+                      <h3 className="text-base md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
+                  <p className="text-xs md:text-xs lg:text-sm">{p.angkatan}</p>
               </div>
             </div>
+            <div className="text-white absolute -bottom-10 left-3 right-3
+                            md:bottom-3 md:left-4 md:right-4
+                            lg:bottom-4 lg:left-3 lg:right-6">
+                {/* Quotes Block */}
+                <div className="
+                    flex gap-2
+                    opacity-0 translate-y-0
+                    transition-all duration-700 delay-100
+                    group-hover:opacity-100
+                    group-hover:translate-y-[-25px]
+                    group-active:opacity-100
+                    group-active:translate-y-[-60px]">
+
+                    {/* vertical line */}
+                    <div className="w-[2px] bg-white rounded-full"></div>
+
+                    {/* quote */}
+                    <p className="text-sm italic text-white/90 leading-relaxed">
+                        {p.quote}
+                    </p>
+                </div>
+            </div>
+        </div>
           ))}
         </div>
       </div>
@@ -123,7 +121,8 @@ export default function meetTheInterns() {
       <div>
         <div className="max-w-7xl mx-auto px-8">
             {/* Divider */}
-            <div className="flex items-center gap-6 mt-10 my-5 md:my-12.5 lg:my-30">
+            <div className="flex items-center gap-6 my-5 md:my-12.5 lg:my-20
+                            mt-15 md:mt-12.5 lg:mt-30">
                 <div className="flex-1 h-0.5 bg-gradient-to-r from-[#2a5bfb] to-[#132a73]" />
                     <p className="text-center text-xl md:text-2xl lg:text-3xl font-semibold
                                   bg-gradient-to-r from-[#2a5bfb] to-[#132a73]
@@ -133,31 +132,26 @@ export default function meetTheInterns() {
                 <div className="flex-1 h-0.5 bg-gradient-to-r from-[#2a5bfb] to-[#132a73]" />
             </div>  
 
-          {/* Cards */}
-          <div className="grid place-items-center
-                          grid-cols-2 md:grid-cols-2 lg:grid-cols-3
-                          gap-14 md:gap-12 lg:gap-10
-                          my-10 md:my-5 lg:-my-5">
-            {pemTek.map((p, i) => (
-              <div
-                key={i}
-                className="relative">
-
-                <div
-                  tabIndex={0}
-                  className="peer absolute inset-0 z-10 rounded-3xl cursor-pointer"
-                />
-
-                <div
-                  className="group h-[320px] md:h-[370px] lg:h-[420px]
-                            relative w-[240px] md:w-[277.5px] lg:w-[315px]
-                            rounded-3xl overflow-hidden shadow-lg">
+            {/* Cards */}
+            <div className="grid place-items-center
+                            grid-cols-2 md:grid-cols-2 lg:grid-cols-3
+                            gap-4 md:gap-7 lg:gap-10
+                            my-10 md:my-5 lg:-my-5">
+                {pemTek.map((p, i) => (
+                  <div
+                    key={i}
+                    className="relative h-[280px] md:h-[350px] lg:h-[420px]
+                              relative w-[210px] md:w-[262.5px] lg:w-[315px]
+                              rounded-3xl overflow-hidden group shadow-lg">
                     
-                  <img
-                    src={`/anggota/${p.foto}`}
-                    alt={p.nama}
-                    className="w-full h-full object-cover"
-                    />
+                <img
+                  src={`/anggota/${p.foto}`}
+                  alt={p.nama}
+                  className="w-full h-full object-cover
+                            transition-transform
+                            duration-700
+                            group-hover:scale-105
+                            group-active:scale-105"/>
 
                 {/* BLACK GRADIENT (default) */}
                 <div
@@ -165,7 +159,7 @@ export default function meetTheInterns() {
                     bg-gradient-to-t from-black/80 via-black/30 to-transparent
                     transition-opacity duration-700
                     group-hover:opacity-100
-                    peer-focus:opacity-100"
+                    group-active:opacity-100"
                     />
 
                 {/* BLUE GRADIENT (hover) */}
@@ -175,41 +169,45 @@ export default function meetTheInterns() {
                     opacity-0
                     transition-opacity duration-700
                     group-hover:opacity-100
-                    peer-focus:opacity-100"
+                    group-active:opacity-100"
                     />
 
-                {/* text wrapper */}
-                <div className="text-white absolute bottom-0 left-2 right-2
-                                md:left-3 md:right-3
-                                lg:left-4 lg:right-4">
-                    {/* Information Block */}
-                    <div className="transition-all duration-700 group-hover:translate-y-[-40px] peer-focus:translate-y-[-40px]">
-                        <p className="text-sm md:text-base lg:text-lg">{p.peran}</p>
-                            <h3 className="text-base md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
-                        <p className="text-xs md:text-xs lg:text-sm">{p.angkatan}</p>
-                    </div>
-                    {/* Quotes Block */}
-                    <div className="
-                        flex gap-2
-                        opacity-0 translate-y-0
-                        transition-all duration-700 delay-150
-                        group-hover:opacity-100
-                        peer-focus:opacity-100
-                        group-hover:-translate-y-7
-                        peer-focus:-translate-y-7
-                        ">
-
-                        {/* vertical line */}
-                        <div className="w-[2px] bg-white rounded-full"></div>
-
-                        {/* quote */}
-                        <p className="text-sm italic text-white/90 leading-relaxed">
-                            {p.quote}
-                        </p>
-                    </div>
-                </div>
-                </div>
+            {/* text wrapper */}
+            <div className="text-white absolute bottom-3 left-3 right-3
+                            md:bottom-3 md:left-4 md:right-4
+                            lg:bottom-4 lg:left-3 lg:right-6">
+              {/* Information Block */}
+              <div className="transition-all duration-700 group-hover:translate-y-[50px] group-hover:opacity-0
+                              group-active:opacity-0 group-active:translate-y-[50px]">
+                  <p className="text-sm md:text-base lg:text-lg">{p.peran}</p>
+                      <h3 className="text-base md:text-lg lg:text-xl mt-1 font-bold">{p.nama}</h3>
+                  <p className="text-xs md:text-xs lg:text-sm">{p.angkatan}</p>
               </div>
+            </div>
+            <div className="text-white absolute -bottom-10 left-3 right-3
+                            md:bottom-3 md:left-4 md:right-4
+                            lg:bottom-4 lg:left-3 lg:right-6">
+                {/* Quotes Block */}
+                <div className="
+                    flex gap-2
+                    opacity-0 translate-y-0
+                    transition-all duration-700 delay-100
+                    group-hover:opacity-100
+                    group-hover:translate-y-[-25px]
+                    group-active:opacity-100
+                    group-active:translate-y-[-60px]
+                    ">
+
+                    {/* vertical line */}
+                    <div className="w-[2px] bg-white rounded-full"></div>
+
+                    {/* quote */}
+                    <p className="text-sm italic text-white/90 leading-relaxed">
+                        {p.quote}
+                    </p>
+                </div>
+            </div>
+            </div>
             ))}
           </div>
         </div>
