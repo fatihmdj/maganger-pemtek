@@ -3,16 +3,16 @@ import PemtekLogo from "../../assets/logo/Pemtek.avif";
 
 const About = () => {
   return (
-    <div className="flex justify-between max-w-300 mx-auto py-24">
+    <div className="flex flex-col gap-12 lg:gap-4 lg:flex-row justify-between max-w-7xl mx-auto px-14 py-24">
       <div>
-        <div className="text-6xl font-black text-black">
+        <div className="text-5xl xl:text-6xl font-black text-black">
           <h1 className="">Tentang Kemenko</h1>
-          <h1 className="mt-4 text-black">
+          <h1 className="mt-1 lg:mt-4 text-black">
             <span className="text-blue-700">Med</span>tek
           </h1>
         </div>
-        <div className="w-64 h-1.5 mt-14 mb-10 rounded-full bg-amber-200 slash-line" />
-        <div className="text-lg text-neutral-500 font-medium max-w-140 flex flex-col gap-8">
+        <div className="w-64 h-1.5 mt-6 lg:mt-14 mb-10 rounded-full bg-amber-200 slash-line" />
+        <div className="text-lg text-neutral-500 font-medium max-w-full lg:max-w-140 flex flex-col gap-8">
           <p>
             Kemenko Media dan Teknologi adalah garda terdepan informasi dan
             digitalisasi BEM FATISDA. Kami tidak hanya menyampaikan berita,
@@ -25,8 +25,8 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-4">
-        <div className="flex w-fit h-68 bg-white rounded-xl px-8 py-12 gap-8 border border-neutral-100">
+      <div className="flex flex-col gap-4 ">
+        <div className="flex justify-center w-full h-68 bg-white rounded-xl px-8 py-12 gap-8 border border-neutral-100">
           <img
             src={MedkomLogo}
             alt="Logo media dan komunikasi"

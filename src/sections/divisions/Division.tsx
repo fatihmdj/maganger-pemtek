@@ -13,26 +13,26 @@ const Division = () => {
 
   useEffect(() => {
     const parents = gsap.utils.toArray(
-      ".division-parent-card"
+      ".division-parent-card",
     ) as HTMLElement[];
 
     parents.forEach((parent) => {
       const imageCard = parent.querySelector(
-        ".division-image-card"
+        ".division-image-card",
       ) as HTMLElement;
       const titelCard = parent.querySelector(
-        ".division-title-card"
+        ".division-title-card",
       ) as HTMLElement;
 
       parent.addEventListener("mouseenter", () => {
         gsap.to(titelCard, {
-          bottom: "15rem",
+          y: -160,
           duration: 0.5,
           ease: "back.out(1.3)",
         });
         gsap.to(imageCard, {
           top: "2rem",
-          left: "28rem",
+          x: parent.clientWidth - imageCard.clientWidth - 3 * 22,
           scale: 0.8,
           duration: 0.5,
           ease: "back.out(1.3)",
@@ -40,13 +40,13 @@ const Division = () => {
       });
       parent.addEventListener("mouseleave", () => {
         gsap.to(titelCard, {
-          bottom: "6rem",
+          y: 0,
           duration: 0.5,
           ease: "back.out(1.3)",
         });
         gsap.to(imageCard, {
           top: "3rem",
-          left: "3rem",
+          x: 0,
           scale: 1,
           duration: 0.5,
           ease: "back.out(1.3)",
@@ -55,7 +55,7 @@ const Division = () => {
     });
   }, []);
   return (
-    <div className="pt-32 pb-30">
+    <div className="pt-32 pb-30 px-6">
       <div className="text-center pb-16">
         <h1 className="text-6xl font-black tracking-tight text-neutral-900">
           Our Core Divisions
@@ -64,11 +64,11 @@ const Division = () => {
           Dua pilar utama penggerak inovasi BEM FATISDA
         </h3>
       </div>
-      <div className="flex justify-center gap-8">
+      <div className="flex flex-col xl:flex-row items-center xl:justify-center gap-4 xl:gap-8">
         {DataDivision.map((division, index) => (
           <div
             key={index}
-            className={`relative border border-neutral-200 transition-colors duration-300 w-150 h-105 rounded-3xl group division-parent-card cursor-pointer`}
+            className={`relative border border-neutral-200 transition-colors duration-300 w-full xl:w-150 h-105 rounded-3xl group division-parent-card cursor-pointer`}
             style={
               {
                 "--text-color": division.textColor,
@@ -79,11 +79,11 @@ const Division = () => {
             <img
               src={iconMap[division.image]}
               alt="icon-medkom-bem-fatisda-uns"
-              className="w-auto h-34 absolute top-12 left-12 division-image-card"
+              className="w-auto h-34 absolute top-12 left-12 division-image-card translate-x-0"
             />
             <div className="flex flex-col gap-2 absolute bottom-24 left-12 division-title-card">
               <h1
-                className={`text-6xl font-black tracking-tight text-neutral-900 division-text`}
+                className={`text-5xl sm:text-6xl font-black tracking-tight text-neutral-900 division-text`}
               >
                 {division.name}
               </h1>
@@ -94,7 +94,7 @@ const Division = () => {
               </h3>
             </div>
             <p
-              className={`absolute bottom-26 pl-12 pr-24 text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
+              className={`absolute bottom-26 pl-12 pr-24 max-w-160 text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
               style={{
                 color: division.textColor,
               }}
