@@ -56,11 +56,11 @@ const Division = () => {
   }, []);
   return (
     <div className="pt-32 pb-30 px-6">
-      <div className="text-center pb-16">
-        <h1 className="text-6xl font-black tracking-tight text-neutral-900">
+      <div className="text-center pb-8 md:pb-16">
+        <h1 className="text-5xl md:text-6xl font-black tracking-tight text-neutral-900">
           Our Core Divisions
         </h1>
-        <h3 className="text-2xl font-medium text-neutral-500 py-6">
+        <h3 className="text-xl md:text-2xl font-medium text-neutral-500 py-2 md:py-6">
           Dua pilar utama penggerak inovasi BEM FATISDA
         </h3>
       </div>
@@ -94,7 +94,7 @@ const Division = () => {
               </h3>
             </div>
             <p
-              className={`absolute bottom-26 pl-12 pr-24 max-w-160 text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
+              className={`absolute bottom-26 pl-12 pr-12 md:pr-24 max-w-160 text-lg leading-6 md:leading-7 font-medium opacity-0 division-text transition-opacity duration-100`}
               style={{
                 color: division.textColor,
               }}
