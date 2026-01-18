@@ -8,8 +8,17 @@ const Footer = () => {
 
       {/* Main Footer Section */}
       <div className="bg-[#132971] py-10 lg:py-14 -mt-px">
-        <div className="max-w-screen-xl mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-0 justify-between items-start">
-          
+        <div className="
+          mx-auto
+          px-6
+          max-w-screen-xl
+          xl:max-w-[1600px]
+          2xl:max-w-[1800px]
+          flex flex-col lg:flex-row
+          gap-12 lg:gap-20
+          justify-between
+          items-start
+        ">
           {/* Left Section */}
           <div className="max-w-xl">
             <h2 className="text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-none tracking-tight mb-4 lg:mb-5">
@@ -67,7 +76,17 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="bg-[#193797] py-4 lg:py-6.75 -mt-px">
-        <div className="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center text-center sm:text-left">
+        <div className="
+          mx-auto
+          px-6
+          max-w-screen-xl
+          xl:max-w-[1600px]
+          2xl:max-w-[1800px]
+          flex flex-col lg:flex-row
+          gap-12 lg:gap-20
+          justify-between
+          items-start
+        ">
           <p className="text-[#FEF1EA] text-sm sm:text-base lg:text-4.5 font-medium">
             © 2025 Maganger Kemenko Media & Teknologi - Pemtek Division.
           </p>
