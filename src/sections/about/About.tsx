@@ -3,7 +3,7 @@ import PemtekLogo from "../../assets/logo/Pemtek.avif";
 
 const About = () => {
   return (
-    <div className="flex flex-col gap-12 lg:gap-4 lg:flex-row justify-between max-w-7xl mx-auto px-14 py-24">
+    <div className="flex flex-col gap-12 lg:gap-4 lg:flex-row justify-between max-w-7xl mx-auto px-6 md:px-14 py-24">
       <div>
         <div className="text-5xl xl:text-6xl font-black text-black">
           <h1 className="">Tentang Kemenko</h1>

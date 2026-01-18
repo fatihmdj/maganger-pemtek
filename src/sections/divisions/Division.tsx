@@ -94,7 +94,7 @@ const Division = () => {
               </h3>
             </div>
             <p
-              className={`absolute bottom-26 pl-12 pr-24 max-w-160 text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
+              className={`absolute bottom-26 pl-12 pr-12 md:pr-24 max-w-160 text-lg leading-6 md:leading-7 font-medium opacity-0 division-text transition-opacity duration-100`}
               style={{
                 color: division.textColor,
               }}
